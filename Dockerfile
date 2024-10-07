@@ -9,8 +9,9 @@ RUN wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.6/op
 RUN wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.6/openshift-install-linux.tar.gz -P /ocp-tools
 
 RUN ls -la /ocp-tools
+RUN chmod 777 /ocp-tools
 RUN cd /ocp-tools
-RUN chmod 777 *
+RUN chmod 777 /ocp-tools/*
 RUN tar xvf openshift-install-linux.tar.gz openshift-install
 RUN tar xvf openshift-client-linux.tar.gz oc kubectl
 RUN cp oc kubectl /usr/local/bin
