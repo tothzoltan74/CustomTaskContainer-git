@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk --no-cache --update add bash wget   
+RUN apk --no-cache --update add bash wget tar
 
 ADD ./ .
 RUN chmod 777 /app
@@ -17,3 +17,4 @@ RUN tar xvf openshift-client-linux.tar.gz oc kubectl
 RUN cp oc kubectl /usr/local/bin
 
 ENTRYPOINT ["/app/start.sh"]
+
