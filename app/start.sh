@@ -5,7 +5,7 @@
 #    sleep 1; 
 #done
 
-until [ -f /app/custom.sh ]; do
+until [ -e /app/custom.sh ]; do
     echo "waiting for custom.sh..."
     sleep 1
 done
