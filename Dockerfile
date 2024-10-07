@@ -1,2 +1,3 @@
 FROM alpine:latest
-RUN apk add --no-cache
+RUN apk fix && \
+    apk --no-cache --update add bash mail 
