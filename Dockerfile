@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk --no-cache --update add bash wget tar
+RUN apk --no-cache --update add bash wget tar libc6-compat
 
 ADD ./ .
 RUN chmod 777 /app
