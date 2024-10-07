@@ -16,5 +16,11 @@ RUN chmod 777 /ocp-tools/*
 RUN tar xvf /ocp-tools/openshift-client-linux.tar.gz oc kubectl
 RUN cp oc kubectl /usr/local/bin
 
+RUN mkdir /.kube
+RUN chmod 777 /.kube
+
+
+
 ENTRYPOINT ["/app/start.sh"]
+
 
